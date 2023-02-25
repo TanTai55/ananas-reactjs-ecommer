@@ -1,0 +1,39 @@
+.Elsatic {
+  width: 100%;
+  height: 200px;
+  background: #333;
+  color: #fff;
+  font-size: 30px;
+  margin: 0 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jvXOvp {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    width: 100%;
+    direction: ltr;
+    margin-bottom: 50px; 
+}
+
+.jvXOvp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  direction: ltr;
+  margin-bottom: 50px;
+  max-width: 115rem;
+  margin: 0 auto;
+}    

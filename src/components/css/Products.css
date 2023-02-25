@@ -1,0 +1,222 @@
+#product{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+
+}
+.card{
+    text-align: center;
+    position: relative;
+    padding: 0 1rem;
+}
+.card:hover{
+    box-shadow: none;
+}
+.card img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 28rem;
+}
+.card img {
+    max-height: 25rem;
+}
+
+.card-content {
+  color: #ff5f17;
+}
+.card h3{
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--grey);
+  margin-top: 2rem;
+}
+.rating {
+  color: var(--yellow);
+  font-size: 1.3rem;
+}
+
+.card ul {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 30%;
+  left: 50%;
+  width: 17rem;
+  height: 5rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transform: translate(-50%, -50%) scale(0.7);
+  transition: all 0.5s ease-in-out;
+}
+
+.card:hover ul {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.card:hover ul i {
+  color: var(--white);
+}
+
+.card ul li:not(:last-child) {
+  margin-right: 1.6rem;
+}
+
+.card ul a {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--pink);
+  width: 3.5rem;
+  height: 3.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.card ul a:hover {
+  background-color: var(--black);
+}
+
+.card ul a::before {
+  content: "";
+  position: absolute;
+  top: -0.6rem;
+  left: -0.6rem;
+  height: 0;
+  width: 0;
+  border-top: 3px solid var(--pink);
+  border-left: 3px solid var(--pink);
+  transition: 0.5s;
+  opacity: 0;
+  z-index: 1;
+}
+
+.card ul a::after {
+  content: "";
+  position: absolute;
+  bottom: -0.6rem;
+  right: -0.6rem;
+  width: 0;
+  height: 0;
+  border-bottom: 3px solid var(--pink);
+  border-right: 3px solid var(--pink);
+  z-index: 1;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.card ul a:hover::before {
+  width: 126%;
+  height: 126%;
+  border-top: 3px solid var(--black);
+  border-left: 3px solid var(--black);
+  opacity: 1;
+}
+
+.card ul a:hover::after {
+  width: 126%;
+  height: 126%;
+  border-bottom: 3px solid var(--black);
+  border-right: 3px solid var(--black);
+  opacity: 1;
+}
+
+.card .price {
+  color: var(--black);
+  font-weight: 500;
+  font-size: 16px;
+
+}
+.card h3 a{
+    text-decoration: none;
+    color: #333;
+}
+.card h3 a:hover{
+    color: crimson;
+}
+.card span{
+    color: #ff5f17;
+}
+.card p{
+    margin: 10px 0;
+}
+
+.category .title {
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@media only screen and (max-width: 998px) {
+  #product {
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 0rem;
+    column-gap: 4rem;
+  }
+   .card img {
+    max-height: 30rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #product {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0rem;
+    column-gap: 1rem;
+  }
+
+  .card h3{
+    height: 3rem;
+  }
+
+  .card img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+    #product {
+    grid-template-columns: repeat(1, 1fr);
+    
+  }
+   .card h3{
+    height: 2rem;
+  }
+
+   .card img {
+    height: 30rem;
+    width: 100%;
+    padding: 0 4rem;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  #product {
+    grid-template-columns: repeat(1, 1fr);
+    margin-bottom: 0rem;
+  }
+  .card {
+    margin-bottom: 2rem;
+  }
+   .card h3{
+    height: 2rem;
+  }
+
+   .card img {
+    height: 30rem;
+    width: 100%;
+    padding: 0 4rem;
+  }
+}
